@@ -1,0 +1,527 @@
+{
+  "info": {
+    "_postman_id": "3799fbe6-df9e-4951-bfca-c1a035bd26dc",
+    "name": "Manual Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18377298"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\" : \"aphtbrt\",\r\n    \"password\" : \"rahasia\",\r\n    \"name\" : \"andre\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\" : \"aphtbrt\",\r\n    \"password\" : \"rahasia\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/users/current",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "current"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\" : \"Nando Hutabarat\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/users/current",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "current"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Contact",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"Andre\",\r\n    \"lastName\" : \"Hutabarat\",\r\n    \"email\" : \"ingot@gmail.com\",\r\n    \"phone\" : \"6281362861470\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/contacts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Contact",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"Andre\",\r\n    \"lastName\" : \"Hutabarat\",\r\n    \"email\" : \"ingot@gmail.com\",\r\n    \"phone\" : \"0099009900990099\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/contacts/2c6245fc-f99c-45e4-95cf-fad8229b459c",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts",
+            "2c6245fc-f99c-45e4-95cf-fad8229b459c"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Address",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"street\" : \"Partali\",\r\n    \"city\" : \"Taout\",\r\n    \"province\" : \"Sumut\",\r\n    \"country\" : \"Indo\",\r\n    \"postalCode\" : \"22452\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/contacts/224880be-45b8-4781-9005-678d8e28d122/addresses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts",
+            "224880be-45b8-4781-9005-678d8e28d122",
+            "addresses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Address",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"street\" : \"Partali\",\r\n    \"city\" : \"Taput\",\r\n    \"province\" : \"Sumut\",\r\n    \"country\" : \"Indo\",\r\n    \"postalCode\" : \"22452\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/contacts/224880be-45b8-4781-9005-678d8e28d122/addresses/9a0e52b2-52d3-40ef-9696-d653cbc47104",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts",
+            "224880be-45b8-4781-9005-678d8e28d122",
+            "addresses",
+            "9a0e52b2-52d3-40ef-9696-d653cbc47104"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Remove Address",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/contacts/224880be-45b8-4781-9005-678d8e28d122/addresses/9a0e52b2-52d3-40ef-9696-d653cbc47104",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts",
+            "224880be-45b8-4781-9005-678d8e28d122",
+            "addresses",
+            "9a0e52b2-52d3-40ef-9696-d653cbc47104"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Addresses",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/contacts/224880be-45b8-4781-9005-678d8e28d122/addresses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts",
+            "224880be-45b8-4781-9005-678d8e28d122",
+            "addresses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Contact",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/contacts?name=Andre",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "Andre"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Contact",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/contacts/2c6245fc-f99c-45e4-95cf-fad8229b459c",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts",
+            "2c6245fc-f99c-45e4-95cf-fad8229b459c"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Remove  Contact",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-TOKEN",
+            "value": "3e9f715f-b49f-4e51-abe1-8023de7f5a31"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/contacts/2c6245fc-f99c-45e4-95cf-fad8229b459c",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "contacts",
+            "2c6245fc-f99c-45e4-95cf-fad8229b459c"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
